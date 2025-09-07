@@ -31,6 +31,7 @@ function initGame() {
         cell.addEventListener('click', handleClick, { once: true });
         cell.textContent = '';
         cell.style.color = '';
+        cell.classList.remove("winner");
     });
     currentBoard = Array(9).fill('');
     gameActive = true;
@@ -49,10 +50,11 @@ function handleClick(e) {
 
     makeMove(index, currentPlayer);
 
-    if (checkWin(currentPlayer)) {
+    const winCombo = checkWin(currentPlayer);
+    if (winCombo) {
         if (currentPlayer === 'X') scoreX++;
         else scoreO++;
-        endGame(`¡Jugador ${currentPlayer} ha ganado!`);
+        endGame(`¡Jugador ${currentPlayer} ha ganado!`, winCombo);
         updateScoreboard();
         return;
     }
@@ -86,9 +88,10 @@ function computerMove() {
     const bestMove = findBestMove();
     makeMove(bestMove, computerSymbol);
 
-    if (checkWin(computerSymbol)) {
+    const winCombo = checkWin(computerSymbol);
+    if (winCombo) {
         scoreO++;
-        endGame("¡La computadora ha ganado!");
+        endGame("¡La computadora ha ganado!", winCombo);
         updateScoreboard();
         return;
     }
@@ -155,11 +158,14 @@ function minimax(board, depth, isMaximizing) {
     }
 }
 
-// Verificar si hay un ganador
+// Verificar si hay un ganador (devuelve la combinación ganadora o null)
 function checkWin(symbol, boardState = currentBoard) {
-    return winningCombinations.some(combination => {
-        return combination.every(index => boardState[index] === symbol);
-    });
+    for (let combo of winningCombinations) {
+        if (combo.every(index => boardState[index] === symbol)) {
+            return combo;
+        }
+    }
+    return null;
 }
 
 // Verificar si hay empate
@@ -168,10 +174,16 @@ function checkDraw(boardState = currentBoard) {
 }
 
 // Terminar el juego
-function endGame(message) {
+function endGame(message, winningCombo = null) {
     status.textContent = message + " Pulsa Reiniciar para jugar otra vez.";
     gameActive = false;
     cells.forEach(cell => cell.removeEventListener('click', handleClick));
+
+    if (winningCombo) {
+        winningCombo.forEach(index => {
+            cells[index].classList.add("winner");
+        });
+    }
 }
 
 // Cambiar el símbolo del jugador

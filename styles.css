@@ -133,3 +133,15 @@ h1 {
 .scoreboard p {
     margin: 0;
 }
+/* Celdas ganadoras */
+.winner {
+    background: rgba(0, 255, 100, 0.3) !important;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+    animation: blink 1s infinite alternate;
+}
+
+/* Parpadeo verde neón */
+@keyframes blink {
+    from { background: rgba(0, 255, 100, 0.3); }
+    to   { background: rgba(0, 255, 100, 0.7); }
+}
