@@ -1,5 +1,10 @@
 # Tic Tac Toe — Juego (vs. CPU y 2 jugadores)
 
+<img src="https://img.shields.io/badge/JavaScript-282C34?logo=javascript&logoColor=F7DF1E" alt="JavaScript logo" title="JavaScript" height="25" />
+    &nbsp;<img src="https://img.shields.io/badge/CSS-282C34?logo=css&logoColor=1572B6" alt="CSS logo" title="CSS" height="25" />
+    &nbsp;<img src="https://img.shields.io/badge/HTML-282C34?logo=html5&logoColor=F54927" alt="HTML logo" title="HTML" height="25" />
+    &nbsp;
+
 Juego de **Tic Tac Toe** inspirado en el desafío de freeCodeCamp.
 Permite jugar contra la computadora (IA Minimax invencible) o entre dos jugadores, seleccionar X/O y llevar marcador de victorias/empates. Además resalta la línea ganadora.
 
@@ -85,8 +90,7 @@ He añadido funciones extras (marcador persistente durante la sesión, modo PvP 
 
 ## 📸 Capturas
 
-![Tablero - Demo](assets/screenshot-board.png)
-![Marcador y modos](assets/screenshot-mode.png)
+![Tablero - Demo](assets/screenshot-board.png)&nbsp;![Marcador y modos](assets/screenshot-mode.png)
 
 ---
 
@@ -131,7 +135,7 @@ Este proyecto está bajo la licencia **MIT** — siéntete libre de usarlo y mod
 
 ## ✅ Checklist antes de entregar a freeCodeCamp
 
-* [ ] Pegar el HTML/CSS/JS en un **CodePen** limpio (HTML panel, CSS panel, JS panel).
-* [ ] Probar las User Stories en CodePen (selector X/O, jugar contra la IA, reinicio).
-* [ ] Copiar la URL del CodePen y pulsar **"I've completed this challenge"** en freeCodeCamp.
-* [ ] (Opcional) Añadir link al CodePen en el `README.md` del repositorio.
+* [x] Pegar el HTML/CSS/JS en un **CodePen** limpio (HTML panel, CSS panel, JS panel).
+* [x] Probar las User Stories en CodePen (selector X/O, jugar contra la IA, reinicio).
+* [x] Copiar la URL del CodePen y pulsar **"I've completed this challenge"** en freeCodeCamp.
+* [x] (Opcional) Añadir link al CodePen en el `README.md` del repositorio.
