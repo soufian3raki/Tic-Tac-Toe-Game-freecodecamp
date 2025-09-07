@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    width: 400px;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    margin-bottom: 15px;
+}
+
+/* Opciones de juego */
+.game-options, .game-mode {
+    margin-bottom: 15px;
+}
+
+.symbol-btn, .mode-btn {
+    background: transparent;
+    border: 2px solid cyan;
+    color: cyan;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px cyan;
+}
+
+.symbol-btn:hover, .mode-btn:hover {
+    background: cyan;
+    color: #000;
+    box-shadow: 0 0 15px cyan;
+}
+
+.symbol-btn.active, .mode-btn.active {
+    background: cyan;
+    color: #000;
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan;
+}
+
+/* Tablero */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid cyan;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cell:hover {
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Colores para X y O */
+.cell:contains("X") {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 25px #00f0ff;
+}
+
+.cell:contains("O") {
+    color: #ff0040;
+    text-shadow: 0 0 10px #ff0040, 0 0 25px #ff0040;
+}
+
+/* Estado del juego */
+.status {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px cyan;
+}
+
+/* Botón de reinicio */
+.reset-btn {
+    background: transparent;
+    border: 2px solid #ff0040;
+    color: #ff0040;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #ff0040;
+}
+
+.reset-btn:hover {
+    background: #ff0040;
+    color: #000;
+    box-shadow: 0 0 15px #ff0040, 0 0 30px #ff0040;
+}
+
+/* Marcador */
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-shadow: 0 0 5px cyan;
+}
+
+.scoreboard p {
+    margin: 0;
+}
