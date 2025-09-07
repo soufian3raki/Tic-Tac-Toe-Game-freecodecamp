@@ -39,8 +39,8 @@ He añadido funciones extras (marcador persistente durante la sesión, modo PvP 
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/TU_USUARIO/tic-tac-toe.git
-   cd tic-tac-toe
+   git clone https://github.com/soufian3raki/Tic-Tac-Toe-Game-freecodecamp
+   cd tic-tac-toe-game
    ```
 
 2. Abrir `index.html` en tu navegador (doble clic o `Open with → Browser`).
